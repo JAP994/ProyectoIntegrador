@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Reserva feliz</title>
+    <a href="mision.html" ><h1><font color="#2A5F2B"><font size=6>MISIÓN</font></font></h1></a>
+</head>
+
+<body>
+      <div class="imag" id="imagen" style="border:10 ">
+        <center><h1><font color="#336BA0"><font size=11>RESERVA FELIZ</font></font></h1></center>
+        <center><header> <img src="reservas.png" height="250px" width="250px"></header></center>
+      </div>
+<center><body>
+                
+                    <div class="container" id="Iniciosesion" style="border:10">
+                    <form>
+                    <center><h1><font color="#2A5F2B"><font size=6>INICIAR SESIÓN</font></font></h1></center>
+                    
+
+                    <font color="#336BA0"><font size=5>USUARIO:<input type="text" name="usuario" id="usuario" placeholder="ejemplo pao"><p id="errorUsuarioI"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU USUARIO CORRECTO</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>CONTRASEÑA: <input type="password" name="contraseña" id="contraseña"  placeholder="ejemplo ******"> <p id="errorContraI"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE LA CONTRASEÑA CORRECTA</p> </font></font></font>
+                    </p>
+                    <br>
+                    
+                    <input type="button" value="Iniciar sesión" id="btniniciar" onclick="iniciarsesion();" >
+                    
+                    <input type="button" value="Registrate" id="btnregistrar" onclick="Registrarse();">
+                   
+                    <input type="button" value="Olvidar contraseña" id="btnolvidar" onclick="Olvidarcontraseña();">
+                    <br><br>
+                   
+                   </form>
+                   </div>                
+                <div class="container" id="Registrarse" style="border:10 ">
+                    <form>
+                    
+                    <center><h1><font color="#2A5F2B"><font size=6>REGISTRATE</font></font></h1></center>
+                    
+                    <font color="#336BA0"><font size=5>NOMBRE: <input type="text" name="nombre" id="nombre"  placeholder="ejemplo paola"><p id="errornombre"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU NOMBRE</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>USUARIO: <input type="text" name="usuario1" id="usuario1"  placeholder="ejemplo pao"><p id="errorusuario"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU USUARIO</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>EDAD: <input type="number" name="edad" id="edad"  placeholder="ejemplo 21"><p id="erroredad"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU EDAD</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>CELULAR: <input type="number" name="celular" id="celular"  placeholder="ejemplo 0996431860"><p id="errorcelular"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU NUMERO CELULAR</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>CONTRASEÑA: <input type="password" name="contraseña1" id="contraseña1"  placeholder="ejemplo ******"><p id="errorcontraseña1"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU CONTRASEÑA</p></font></font></font>
+                    <br><br>
+                    <font color="#336BA0"><font size=5>REPETIR CONTRASEÑA: <input type="password" name="contraseña2" id="contraseña2"  placeholder="ejemplo ******"><p id="errorcontraseña2"  style="color: red; display: none"><font size=2>SU CONTRASEÑA NO COINCIDE</p></font></font></font>
+                    <br><br><input type="hidden" name="validacion" id="validacion">
+                    </p>
+                    <br>
+                    <p id="mensajeerror"  style="color: red; display: none"></p>
+                    <br>
+
+                    <input type="button" value="Registrarse" id="btnregistrarse" onclick="registrarusuario();">
+                    
+                    <input type="button" value="Retornar" id="btnretornar" onclick="Reservaregresar()";>
+                    
+                   </form>
+                   </div>
+                    
+                <div class="container" id="olvidarContraseña" style="border:10 ">
+                        <form>
+                            
+                        <center><h1><font color="#2A5F2B"><font size=6>OLVIDO SU CONTRASEÑA</font></font></h1></center>
+                        
+                        
+                        <font color="#336BA0"><font size=5>USUARIO: <input type="text" name="usuario2" id="usuario2"  placeholder="ejemplo pao"><p id="errorocusuario"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE SU USUARIO CORRECTO</p></font></font></font>
+                        <br><br>
+                        
+                        <font color="#336BA0"><font size=5>CELULAR: <input type="number" name="celular2" id="celular2"  placeholder="ejemplo 0996431860"><p id="erroruscelular"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE CORRECTAMENTE SU NUMERO</p></font></font></font>
+                        <br><br>
+                        </p>
+                        <br>
+                        <input type="button" value="Buscar Contraseña" id="btnbuscar" onclick="buscarcontra();">
+                        <input type="text" name="contra" id="contra">
+                        <br><br>
+                        <input type="button" value="Retornar" id="btnretornar" onclick="Reservaregresar()";>
+                       </form>
+                       </div>
+                    
+                    <div class="container" id="menuUsuario" style="border:10 ">
+    
+                        <form>
+                        <center><h1><font color="#2A5F2B"><font size=6>SELECCIONE UNA OPCIÓN</font></font></h1></center>
+                       
+                        <center><input type="button" value="Reservar cancha" id="btnreservarcancha" onclick="reservarcancha1();">
+
+                        <input type="button" value="Ver sus reservas" id="btnverreservar" onclick="llenartablaReservas();">
+                        <input type="button" value="Regresar" id="btnregresarm" onclick="Reservaregresar()";></center>
+
+                       </form>
+
+                     </div>
+
+                     
+                    <div class="container" id="reservarCancha" style="border:10 ">
+    
+                            <form>
+                            <br><br>
+                            <center><h1><font color="#2A5F2B"><font size=8>RESERVE SU CANCHA</font></font></h1></center>
+                           
+                            <br>
+
+                            <font color="#1F618D"><font size=5>Selecciona la fecha deseada: 
+                            <input type="date" name="fecha" id="fecha"></font> 
+                            <p id="errorfecha"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE LA FECHA DE RESERVA</p></font>
+                            <br><br>
+                            <!-- Campo de entrada de hora -->
+                            <font color="#1F618D"><font size=5>Selecciona la hora deseada:
+                            <input type="time" name="hora" id="hora" min="16:00"
+                                                           max="23:00" step="3600"></font> <p id="errorhora"  style="color: red; display: none"><font size=2>POR FAVOR INGRESE LA HORA DE RESERVA</p></font>
+                            
+                            <br><br><br>
+                             <center><h1><font color="#2A4006"><font size=6>PARA ELEGIR SU CANCHA, <br> PORFAVOR DE CLICK ENCIMA DE LA CANCHA QUE DESEE RESERVAR</font></font></h1></center>
+                             <br><br>
+                             <table>
+                                
+                                 <tr>
+                                     <td>
+                                     
+                                     <img src="reserva cancha/cancha1.jpg" width="250px" height="150px" onclick="document.getElementById('canchaseleccionada').innerHTML='CANCHA 1';">
+                                     <br>
+                                     <center>CANCHA 1</center>
+                                     </td>
+                                     <td>
+                                     
+                                     <img src="reserva cancha/cancha2.jpg" width="250px" height="150px" onclick="document.getElementById('canchaseleccionada').innerHTML='CANCHA 2';">
+                                     <br>
+                                     <center>CANCHA 2</center>
+                                     </td>
+                                     <td>
+                                     
+                                     <img src="reserva cancha/cancha3.jpg" width="250px" height="150px" onclick="document.getElementById('canchaseleccionada').innerHTML='CANCHA 3';">
+                                     <br>
+                                     <center>CANCHA 3</center>
+                                     </td>
+                                     <td>
+                                     
+                                     <img src="reserva cancha/cancha4.jpg" width="250px" height="150px" onclick="document.getElementById('canchaseleccionada').innerHTML='CANCHA 4';">
+                                     <br>
+                                     <center>CANCHA 4</center>
+                                     </td>
+                                     <td>
+                                   
+                                    <img src="reserva cancha/cancha5.jpg" width="250px" height="150px" onclick="document.getElementById('canchaseleccionada').innerHTML='CANCHA 5';">
+                                    <br>
+                                    <center>CANCHA 5</center>
+                                     </td>
+                                 </tr>
+                             </table>                               
+                             <br><br>
+                             <font color="#2A5F2B"><font size=6>CANCHA SELECCIONADA: <p id="canchaseleccionada"></p></font>
+                              <p id="canchadereserva"  style="color: red; display: none"><font size=2>POR FAVOR SELECCIONE UNA CANCHA</p></font>
+                              <br>
+                              <input type="button" value="Reservar cancha" id="btnreservar" onclick="realizarReserva();">
+                            <input type="button" value="Regresar" id="btnregresar" onclick="Iniciosesion();"></center>
+            
+    
+                           </form>
+                           </div>
+    
+                           <div class="container" id="verreservas" style="border:10; display: none ">
+    
+                                <form>
+                                        <center><h1><font color="#2A5F2B"><font size=8>VER RESERVAS</font></font></h1></center>
+                               
+                               
+                                 <center><div>
+                                        <table id="TablaReserva" border="2">
+                                            <tr>
+                                                <th>USUARIO</th>
+                                                <th>FECHA</th>
+                                                <th>HORA</th>
+                                                <th>CANCHA</th>
+                                            </tr>
+                                           
+                                
+                                        </table>
+                                    </div></center>
+                                <br><br>
+                                <center>
+                                <input type="button" value="Regresar" id="btnregresarm" onclick="Iniciosesion();"></center>
+        
+                               </form>
+        
+                             </div>
+            
+             <script lang="JavaScript">
+                 function Iniciosesion() {
+             //esconder
+                document.getElementById('Iniciosesion').style.display ='none';
+                document.getElementById('Registrarse').style.display ='none';
+                document.getElementById('olvidarContraseña').style.display ='none';
+                document.getElementById('reservarCancha').style.display ='none';
+                document.getElementById('menuUsuario').style.display ='';
+                document.getElementById("verreservas").style.display="none";
+                document.getElementById("imagen").style.display="none";
+                
+              }
+    
+              function Registrarse() {
+             //esconder
+                document.getElementById('Iniciosesion').style.display ='none';
+                document.getElementById('olvidarContraseña').style.display ='none';
+                document.getElementById('reservarCancha').style.display ='none';
+                document.getElementById('menuUsuario').style.display ='none';
+                document.getElementById('Registrarse').style.display ='';
+                document.getElementById("imagen").style.display="none";
+                
+               
+              }
+              
+              function Olvidarcontraseña() {
+             //esconder
+                document.getElementById('Iniciosesion').style.display ='none';
+                document.getElementById('Registrarse').style.display ='none';
+                document.getElementById('reservarCancha').style.display ='none';
+                document.getElementById('menuUsuario').style.display ='none';
+                document.getElementById('olvidarContraseña').style.display ='';
+                document.getElementById("imagen").style.display="none";
+              
+              }
+    
+    
+              function Reservaregresar() {
+             //esconder
+                document.getElementById('Registrarse').style.display ='none';
+                document.getElementById('olvidarContraseña').style.display ='none';
+                document.getElementById('reservarCancha').style.display ='none';
+                document.getElementById('menuUsuario').style.display ='none';
+                document.getElementById('Iniciosesion').style.display ='';
+                
+                
+              }
+    
+              Reservaregresar();
+
+              function reservarcancha1() {
+             //esconder
+                document.getElementById('Registrarse').style.display ='none';
+                document.getElementById('olvidarContraseña').style.display ='none';
+                document.getElementById('reservarCancha').style.display ='';
+                document.getElementById('menuUsuario').style.display ='none';
+                document.getElementById('Iniciosesion').style.display ='none';
+                document.getElementById('administra').style.display ='none';
+                
+              }
+
+              
+            </script>
+            
+            <script>
+                function Usuario1(nombre, usuario, edad, celular, contraseña) {
+                        this.nombre = nombre;
+                        this.usuario = usuario;
+                        this.edad = edad;
+                        this.celular = celular;
+                        this.contraseña = contraseña;
+                
+                }
+                var usuarios = [
+                        new Usuario1("pao","pao","1", "0000", "cpao"),
+                        new Usuario1("elii","elii","2", "0001", "celii"),
+                        new Usuario1("mate","mate","3", "0002", "cmate"),
+                        new Usuario1("ceci","ceci","4", "0004", "cceci"),
+                
+                ];
+                function registrarusuario() {
+                    document.getElementById("errornombre").style.display ="none";
+                    document.getElementById("errorusuario").style.display ="none";
+                    document.getElementById("erroredad").style.display ="none";
+                    document.getElementById("errorcelular").style.display ="none";
+                    document.getElementById("errorcontraseña1").style.display ="none";
+                    document.getElementById("errorcontraseña2").style.display ="none";
+                    document.getElementById('mensajeerror').style.display ="none";
+
+                    var msgerror=document.getElementById('mensajeerror');
+                    var nom = document.getElementById("nombre").value;
+                    var usuar = document.getElementById("usuario1").value;
+                    var edad = document.getElementById("edad").value;
+                    var cell = document.getElementById("celular").value;
+                    var contra = document.getElementById("contraseña1").value;
+                    var contra2 = document.getElementById("contraseña2").value;
+                    if (nom == ""){
+                        document.getElementById("errornombre").style.display ="";
+                        return;
+                    }
+                    if (usuar == ""){
+                        document.getElementById("errorusuario").style.display ="";
+                        return;
+                    }
+                    if (edad == ""){
+                        document.getElementById("erroredad").style.display ="";
+                        return;
+                    }
+                    if (cell == ""){
+                        document.getElementById("errorcelular").style.display ="";
+                        return;
+                    }
+                    if (contra == ""){
+                        document.getElementById("errorcontraseña1").style.display ="";
+                       return;
+                    }
+                   
+                    if (contra != contra2){
+                        document.getElementById("errorcontraseña2").style.display ="";
+                        return;
+                    }
+                    document.getElementById("validacion").value= "true";
+
+                    for (var i =0; i<usuarios.length;i++)
+                    {
+                        var itemU=usuarios[i];
+                        var usuar = document.getElementById("usuario1").value;
+                        var msgerror=document.getElementById('mensajeerror');
+
+                        if (usuar == itemU.usuario) {
+                            msgerror.innerHTML="USUARIO REPETIDO";
+                            msgerror.style.display="";
+                            return ;
+                        }
+                        
+
+
+                    }
+                    usuarios.push(new Usuario1(nom, usuar, edad, cell, contra));
+                    msgerror.innerHTML="GUARDADO EXITOSO";
+                    msgerror.style.display="";                    
+                }
+    
+                    function buscarusuario(item) {
+                        var usuar = document.getElementById("usuario1").value;
+                        var msgerror=document.getElementById('mensajeerror');
+
+                        if (usuar == item.usuario) {
+                            msgerror.innerHTML="USUARIO REPETIDO";
+                            msgerror.style.display="";
+                            document.getElementById("validacion").value= "false";
+                            return ;
+                        }
+                        document.getElementById("validacion").value= "true";
+                    }
+                    
+                </script>
+                <script>
+                function buscarcontra() {
+                    document.getElementById("errorocusuario").style.display="none";
+                    document.getElementById("erroruscelular").style.display="none";
+                    var nom2 = document.getElementById("usuario2").value;
+                    var usuar2 = document.getElementById("celular2").value;
+                    
+                    if (nom2 == ""){
+                        document.getElementById("errorocusuario").style.display="";
+                        return;
+                    }
+                    if (usuar2 == ""){
+                        document.getElementById("erroruscelular").style.display="";
+                        return;
+                    }
+                    usuarios.forEach(buscarcontraseña);
+    
+    
+                }
+    
+                function buscarcontraseña(item) {
+                    var nom2 = document.getElementById("usuario2").value;
+                    var usuar2 = document.getElementById("celular2").value;
+                        if (nom2 == item.usuario && usuar2==item.celular ) {
+                            document.getElementById("contra").value= item.contraseña;
+                            return ;
+                        }
+                    }
+    
+                 function iniciarsesion() {
+                    document.getElementById("errorUsuarioI").style.display ="none";
+                    document.getElementById("errorContraI").style.display ="none";
+
+                    var strusuario = document.getElementById("usuario").value;
+                    var strcontraseña = document.getElementById("contraseña").value;
+                    
+                    if (strusuario == ""){
+                        document.getElementById("errorUsuarioI").style.display ="";
+                        return;
+                    }
+                    if (strcontraseña == ""){
+                        document.getElementById("errorContraI").style.display ="";
+                        return;
+                    }
+                    usuarios.forEach(buscarusuariocontraseña);
+    
+                }
+    
+                function buscarusuariocontraseña(item) {
+                    var strusuario = document.getElementById("usuario").value;
+                    var strcontraseña = document.getElementById("contraseña").value;
+                        if (strusuario == item.usuario && strcontraseña==item.contraseña ) {
+                            Iniciosesion();
+                            return ;
+                        }
+                    }
+
+            </script>
+            <script>
+            
+                function reserva1(usuario, fecha, hora, cancha) {
+                        this.usuario = usuario;
+                        this.fecha = fecha
+                        this.hora = hora;
+                        this.cancha = cancha;
+                
+                }
+                var reservaciones = [
+                        new reserva1("pao","2019-08-04","17:00", "CANCHA 3"),
+                        new reserva1("elii","2019-08-12","17:00", "CANCHA 2"),
+                        
+                
+                ];
+
+                function realizarReserva() {
+                    document.getElementById("errorfecha").style.display ="none";
+                    document.getElementById("errorhora").style.display ="none";
+                    document.getElementById("canchadereserva").style.display ="none";
+
+                    var usr = document.getElementById("usuario").value;
+                    var fch = document.getElementById("fecha").value; 
+                    var hor = document.getElementById("hora").value;
+                    var cancha = document.getElementById("canchaseleccionada").innerHTML;
+                    if (fch == ""){
+                        document.getElementById("errorfecha").style.display ="";
+                        
+                        return;
+                    }
+
+                    if (hor == ""){
+                        document.getElementById("errorhora").style.display ="";
+                        
+                        return;
+                    }
+
+                    if (cancha == ""){
+                        document.getElementById("canchadereserva").style.display ="";
+                        
+                        return;
+                    }
+
+                    for (let index = 0; index < reservaciones.length; index++) {
+                        var element = reservaciones[index];
+                        if (cancha == element.cancha && fch == element.fecha  && hor == element.hora) {
+                            alert ("esta cancha ya esta reservada a esta hora");
+                            return;
+                        }
+                        
+                    }
+                    
+                    reservaciones.push(new reserva1(usr, fch, hor, cancha));
+
+                 alert ("CANCHA RESERVADA");
+                    
+                }
+                
+
+            </script>
+    
+    <script lang="javascrit">
+        function llenartablaReservas(){
+            document.getElementById("menuUsuario").style.display="none";
+            document.getElementById("verreservas").style.display="";
+            
+            var tablar=document.getElementById("TablaReserva");
+            tablar.innerHTML="<tr><th>USUARIO</th><th>FECHA</th><th>HORA</th><th>CANCHA</th></tr>";
+            var tblBody = document.createElement("tbody");
+            for(var i=0;i<reservaciones.length;i++)
+            {
+                var elemento =reservaciones[i];
+                var usr = document.getElementById("usuario").value;
+                if (usr == elemento.usuario) {
+                    
+                    var hilera = document.createElement("tr");                
+                    var celda = document.createElement("td");
+                    var textoCelda= document.createTextNode(elemento.usuario);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+
+                    celda = document.createElement("td");
+                    textoCelda= document.createTextNode(elemento.fecha);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+
+                    celda = document.createElement("td");
+                    textoCelda= document.createTextNode(elemento.hora);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+
+                    celda = document.createElement("td");
+                    textoCelda= document.createTextNode(elemento.cancha);
+                    celda.appendChild(textoCelda);
+                    hilera.appendChild(celda);
+
+                    tblBody.appendChild(hilera);
+                }
+            }
+            tablar.appendChild(tblBody);
+        }
+        
+            </script>
+</body>
+
+</html>
